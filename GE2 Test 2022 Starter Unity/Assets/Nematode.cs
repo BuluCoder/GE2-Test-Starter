@@ -22,6 +22,12 @@ public class Nematode : MonoBehaviour
             nema.transform.parent = this.transform;
 
             nema.GetComponent<Renderer>().material.color = Color.HSVToRGB(i / (float)length, 1, 1);
+
+            if (i == 0)
+            {
+                nema.AddComponent(typeof(NoiseWander));
+            }
+
         }
     }
 
