@@ -10,6 +10,8 @@ public class Nematode : MonoBehaviour
 
     void Awake()
     {
+        length = Random.Range(15,35);
+
         for (int i = 0; i < length; i++)
         {
             GameObject nema = GameObject.CreatePrimitive(PrimitiveType.Sphere);
@@ -26,6 +28,8 @@ public class Nematode : MonoBehaviour
             if (i == 0)
             {
                 nema.AddComponent(typeof(NoiseWander));
+                nema.AddComponent<ObstacleAvoidance>();
+                nema.AddComponent<Constrain>();
             }
 
         }
