@@ -30,7 +30,6 @@ public class Nematode : MonoBehaviour
                 nema.AddComponent(typeof(NoiseWander));
                 nema.AddComponent<ObstacleAvoidance>();
                 nema.AddComponent<Constrain>();
-                nema.AddComponent<Pursue>();
             }
 
         }
