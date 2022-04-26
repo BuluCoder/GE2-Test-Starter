@@ -19,6 +19,9 @@ public class NematodeSchool : MonoBehaviour
             Vector3 position = Random.insideUnitSphere * radius;
             GameObject nema = Instantiate(prefab, position, Quaternion.identity);
 
+            //Objects have different starting points.
+            nema.AddComponent<Arrive>();
+
         }
     }
 
