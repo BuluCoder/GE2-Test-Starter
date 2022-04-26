@@ -14,7 +14,12 @@ public class NematodeSchool : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        // Put your code here
+        for(int i = 0; i < count; i ++)
+        {
+            Vector3 position = Random.insideUnitSphere * radius;
+            GameObject nema = Instantiate(prefab, position, Quaternion.identity);
+
+        }
     }
 
     // Update is called once per frame
